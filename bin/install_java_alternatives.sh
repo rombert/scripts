@@ -23,6 +23,12 @@ done
 
 $cmd
 
-cmd="update-alternatives --install /usr/lib/browser-plugins/javaplugin.so javaplugin $dir/jre/plugin/i386/ns7/libjavaplugin_oji.so $prio"
+if [ -f $dir/jre/lib/i386/libnpjp2.so ]; then
+	plugin=$dir/jre/lib/i386/libnpjp2.so
+else
+	plugin=$dir/jre/plugin/i386/ns7/libjavaplugin_oji.so
+fi
+
+cmd="update-alternatives --install /usr/lib/browser-plugins/javaplugin.so javaplugin $plugin $prio"
 
 $cmd
