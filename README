@@ -4,3 +4,4 @@ Tested on OpenSUSE 11.0 and nothing else much.
 
 * install_java_alternatives - eases the installation of a jdk/jre using the
   alternatives mechanism
+* find_duplicates_in_jars - lists duplicate classes by name found in jar files
