@@ -7,3 +7,4 @@ Tested on OpenSUSE 11.0 and nothing else much.
 * find_duplicates_in_jars - lists duplicate classes by name found in jar files
 * move_in - uploads the public ssh key and changes the password on another
   machine
+* tv_out - turns S-Video tv out on or off
