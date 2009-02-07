@@ -1,6 +1,6 @@
 Just some scripts.
 
-Tested on OpenSUSE 11.0 and nothing else much.
+Tested on OpenSUSE 11.{0,1} and nothing else much.
 
 * install_java_alternatives - eases the installation of a jdk/jre using the
   alternatives mechanism
