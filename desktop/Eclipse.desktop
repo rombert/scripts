@@ -4,4 +4,4 @@ Version=1.0
 Name=Eclipse
 Icon=/opt/eclipse/plugins/org.eclipse.platform_3.3.101.v200902111700/eclipse48.png
 Exec=/opt/eclipse/eclipse
-Categories=Development
+Categories=Development;
