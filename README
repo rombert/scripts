@@ -10,5 +10,6 @@ Tested on OpenSUSE 11.{0,1} and nothing else much.
 * tv_out - turns S-Video tv out on or off
 * generate_password - a random password generator
 * rpm_cl - short output of a RPM changelog
+* add_cert_to_keystore - adds a SSL certificate to the keystore
 
 * desktop - some .desktop launcher files
