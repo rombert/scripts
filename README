@@ -11,5 +11,6 @@ Tested on OpenSUSE 11.{0,1} and nothing else much.
 * generate_password - a random password generator
 * rpm_cl - short output of a RPM changelog
 * add_cert_to_keystore - adds a SSL certificate to the keystore
+* whack - try to kill a process nicely at first then with -KILL  after 30 s
 
 * desktop - some .desktop launcher files
