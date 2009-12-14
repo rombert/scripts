@@ -14,5 +14,9 @@ Tested on OpenSUSE 11.{0,1} and nothing else much.
 * whack - try to kill a process nicely at first then with -KILL  after 30 s
 * vacuum_firefox - perform a vacuum command on all firefox sqlite files
 * watermark - apply watermarks on images
+* mirror_eclipse_update_site - retrieves locally a mirror of an eclipse 
+  update site
+* mirror_eclipse_p2_site - retrieves locally a mirror of a p2-enabled eclipse 
+  update site
 
 * desktop - some .desktop launcher files
