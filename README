@@ -19,5 +19,6 @@ Tested on OpenSUSE 11.{0,1} and nothing else much.
 * mirror_eclipse_p2_site - retrieves locally a mirror of a p2-enabled eclipse 
   update site
 * pm_qos - simple count of a gateway availability
+* clear_swap - disables and enables swap to clear its usage
 
 * desktop - some .desktop launcher files
