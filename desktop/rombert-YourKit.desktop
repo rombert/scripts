@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=YourKit Java Profiler
+Icon=/opt/yjp/bin/yjp.ico
+Exec=/opt/yjp/bin/yjp.sh
+Categories=Development;
