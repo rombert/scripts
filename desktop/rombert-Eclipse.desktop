@@ -2,6 +2,6 @@
 Type=Application
 Version=1.0
 Name=Eclipse
-Icon=/opt/eclipse/plugins/org.eclipse.platform_3.6.2.v201102101200/eclipse48.png
+Icon=/opt/eclipse/plugins/org.eclipse.platform_3.7.1.v201109091335/eclipse48.png
 Exec=/opt/eclipse/eclipse
 Categories=Development;
