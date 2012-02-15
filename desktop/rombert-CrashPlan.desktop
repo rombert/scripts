@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=CrashPlan
+Icon=/usr/local/crashplan/skin/icon_app_128x128.png
+Exec=/usr/local/crashplan/bin/CrashPlanDesktop
+Categories=Office;
