@@ -1,6 +1,6 @@
 Just some scripts.
 
-Tested on OpenSUSE 11.x and nothing else much.
+Tested on OpenSUSE 12.x and nothing else much.
 
 * install_java_alternatives - eases the installation of a jdk/jre using the
   alternatives mechanism
@@ -21,5 +21,6 @@ Tested on OpenSUSE 11.x and nothing else much.
 * pm_qos - simple count of a gateway availability
 * clear_swap - disables and enables swap to clear its usage
 * record_screen - records the current X screen using ffmpeg
+* php_dev - controls PHP-related development services
 
 * desktop - some .desktop launcher files
