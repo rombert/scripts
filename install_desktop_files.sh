@@ -1,5 +1,5 @@
 #!/bin/sh
 
 for dfile in `ls -1 desktop/*.desktop`; do 
-	xdg-desktop-icon install $dfile
+	xdg-desktop-menu install $dfile
 done
