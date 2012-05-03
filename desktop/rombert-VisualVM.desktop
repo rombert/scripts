@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=VisualVM
+Icon=/opt/visualvm/bin/icon48.png
+Exec=/opt/visualvm/bin/visualvm
+Categories=Development;
