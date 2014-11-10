@@ -13,7 +13,14 @@ case "$1" in
             if [ $file = ~/.m2/settings-security.xml ]; then
                 continue;
             fi
-            echo $file;
+
+            echo -n $file;
+
+            if [ -h ~/.m2/settings.xml ] && [ $file = $(readlink -f ~/.m2/settings.xml) ] ; then
+                echo  " [x]";
+            else
+                echo "";
+            fi
         done
     ;;
 
