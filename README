@@ -24,5 +24,6 @@ Tested on recent versions of openSUSE
 * php_dev - controls PHP-related development services
 * jdk_use_system_cacerts - replaces jdk cacerts with the ones found in the system
 * m2s - switches between multiple version of Maven's per-use settings.xml
+* list_patches - lists patches available with zypper
 
 * desktop - some .desktop launcher files
