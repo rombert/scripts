@@ -11,6 +11,8 @@ Icon=${ICON_FILE}
 Exec=/opt/eclipse/eclipse
 Categories=Development;" > $SCRATCH_DIR/rombert-Eclipse.desktop
     xdg-desktop-menu install $SCRATCH_DIR/rombert-Eclipse.desktop
+
+    rm -rf $SCRATCH_DIR
 fi
     
 
