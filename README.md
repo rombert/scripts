@@ -23,5 +23,6 @@ Tested on recent versions of openSUSE
 * list_patches - lists patches available with zypper
 * generate_desktop_scripts - generates desktop files on the file for some
   applications that typically ship without them
+* abat - reads android phone battery level using adb
 
 * desktop - some .desktop launcher files
