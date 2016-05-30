@@ -8,7 +8,7 @@ Type=Application
 Version=1.0
 Name=Eclipse
 Icon=${ICON_FILE}
-Exec=/opt/eclipse/eclipse
+Exec=env SWT_GTK3=0 GTK_THEME=Adwaita:light /opt/eclipse/eclipse
 Categories=Development;" > $SCRATCH_DIR/rombert-Eclipse.desktop
     xdg-desktop-menu install $SCRATCH_DIR/rombert-Eclipse.desktop
 
