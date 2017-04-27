@@ -27,9 +27,14 @@ elif [ $# -eq 1 ]; then
         exit 3
     fi
 
-    if [ ! -h ~/.m2/settings.xml ]; then
+    if [ -e ~/.m2/settings.xml -a ! -h ~/.m2/settings.xml ]; then
         echo "Unable to manage settings.xml since it's not a symlink"
         exit 4
+    fi
+
+    if [ $1 = '-u' ]; then
+        rm ~/.m2/settings.xml
+        exit 0
     fi
 
     CFG=~/.m2/settings-$1.xml
