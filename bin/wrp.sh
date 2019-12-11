@@ -6,11 +6,21 @@ if [ $# -lt 2 ]; then echo
 fi
 
 prefix=$1
-cmd=$2
+shift
+
+cmd=$1
+shift
 
 if [ ! -e "${HOME}/.wines/${prefix}" ]; then
     echo "${HOME}/.wines/${prefix} does not exit"
     exit 2
 fi
 
-WINEPREFIX="${HOME}/.wines/${prefix}" wine ${cmd}
+case "${cmd}" in
+    "wineserver")
+        WINEPREFIX="${HOME}/.wines/${prefix}" ${cmd} ${@}
+    ;;
+    *)
+        WINEPREFIX="${HOME}/.wines/${prefix}" wine ${cmd} ${@}
+    ;;
+esac
