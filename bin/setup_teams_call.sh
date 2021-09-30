@@ -4,29 +4,54 @@ log() {
   echo "--> $@ <--"
 }
 
-# quit all, to be sure
-log "Killing Teams and OBS studio"
-flatpak kill com.microsoft.Teams || true
-flatpak kill com.obsproject.Studio || true
+stop_all() {
+    log "Stop Teams and OBS studio"
+    flatpak kill com.microsoft.Teams || true
+    flatpak kill com.obsproject.Studio || true
 
-log "Reloading NoiseTorch"
-# unload noise torch
-noisetorch -u 
-noisetorch -i
+    log "Stopping Android Webcam"
+    systemctl --user stop android-webcam 
+}
 
-log "Setting up Android Webcam"
-systemctl --user stop android-webcam 
-systemctl --user start android-webcam
+if [ $# -ne 1 ]; then
+    echo "Usage $0 on|off"
+    exit 1
+fi
 
-log "Waiting for Webcam to be set up"
-sleep 5
+case "$1" in
+    on)
+        # stop all, to be sure
+        stop_all
 
-log "Starting up OBS studio"
-flatpak run com.obsproject.Studio --scene 'Scrum points' --startvirtualcam &
-sleep 5
+        log "Checking if headset is connected"
+        pactl list sinks | grep 'bluez_sink'
 
-log "Checking if headset is connected"
-pactl list sinks | grep 'bluez_sink'
+        log "Reloading NoiseTorch"
+        # unload noise torch
+        noisetorch -u 
+        noisetorch -i
 
-log "Launching Teams"
-flatpak run com.microsoft.Teams
+        log "Setting up Android Webcam"
+        systemctl --user start android-webcam
+
+        log "Waiting for Webcam to be set up"
+        sleep 5
+
+        log "Starting up OBS studio"
+        flatpak run com.obsproject.Studio --scene 'Scrum points' --startvirtualcam &
+        sleep 5
+
+        log "Launching Teams"
+        flatpak run com.microsoft.Teams
+        ;;
+    off)
+        stop_all
+        ;;
+    *)
+        echo "Usage $0 on|off"
+        exit 1
+        ;;
+esac
+
+
+
