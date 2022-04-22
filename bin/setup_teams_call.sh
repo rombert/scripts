@@ -9,8 +9,8 @@ stop_all() {
     flatpak kill com.microsoft.Teams || true
     flatpak kill com.obsproject.Studio || true
 
-    log "Stopping Android Webcam"
-    systemctl --user stop android-webcam 
+#    log "Stopping Android Webcam"
+#    systemctl --user stop android-webcam 
 }
 
 if [ $# -ne 1 ]; then
@@ -24,18 +24,18 @@ case "$1" in
         stop_all
 
         log "Checking if headset is connected"
-        pactl list sinks | grep 'bluez_sink'
+        pactl list sinks | grep -E 'bluez_sink|bluez_output'
 
         log "Reloading NoiseTorch"
         # unload noise torch
         noisetorch -u 
         noisetorch -i
 
-        log "Setting up Android Webcam"
-        systemctl --user start android-webcam
+#       log "Setting up Android Webcam"
+#       systemctl --user start android-webcam
 
-        log "Waiting for Webcam to be set up"
-        sleep 5
+#        log "Waiting for Webcam to be set up"
+#        sleep 5
 
         log "Starting up OBS studio"
         flatpak run com.obsproject.Studio --scene 'Scrum points' --startvirtualcam &
