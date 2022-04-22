@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=MS Teams (Chrome)
+Icon=msteams
+Exec=/opt/google/chrome/chrome --use-gl=desktop --enable-features=VaapiVideoDecoder teams.microsoft.com
